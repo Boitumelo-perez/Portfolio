@@ -1,0 +1,84 @@
+<header class="heading">
+    <h1 class="name">Sinwamadi Boitumelo Perez</h1>
+    <!-- <div class="nav">
+        <nav>
+            <!-- <button class="n-btn" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true }" >HOME</button> ->
+            <button class="n-btn" routerLink="/home" routerLinkActive="active">HOME</button>
+            <button class="n-btn" routerLink="/about" routerLinkActive="active">ABOUT</button>
+            <button class="n-btn" routerLink="/projects" routerLinkActive="active">PROJECTS</button>
+            <button class="n-btn" routerLink="/experience" routerLinkActive="active">EXPERIENCE</button>
+            <button class="n-btn" routerLink="/skills" routerLinkActive="active">SKILLS</button>
+            <button class="n-btn" routerLink="/contact" routerLinkActive="active">CONTACT</button>
+        </nav>
+    </div> -->
+    <hr>
+</header>
+
+<body>
+  <div class="b">
+    <h1>Welcome to My Portfolio</h1>
+    <!-- <p>Hi, I'm Sinwamadi Boitumelo Perez, a Full-Stack Developer with expertise in Software Development using Angular and Spring Frameworks.</p> -->
+    <p class="text-racing">Hi, I'm Sinwamadi Boitumelo Perez, a Full-Stack Developer with expertise in Software Development using Angular and Spring Frameworks.</p>
+    <!-- <button mat-raised-button (click)="scrollTo('projects')">View Projects</button> -->
+
+    <app-about></app-about>
+
+    <app-projects></app-projects>
+
+    <app-experience></app-experience>
+
+    <app-skills></app-skills>
+    
+    <app-contact></app-contact>
+  
+  </div>
+</body>
+
+<footer class="footer">
+    <div class="top-footer">
+      <p>Sinwamadi Boitumelo Perez.</p>
+    </div>
+
+    <!-- <div class="middle-footer">
+      <ul class="footer-menu">
+        <li class="footer_menu_list">
+          <a href="#">Home</a>
+        </li>
+        <li class="footer_menu_list">
+          <a href="#about">About</a>
+        </li>
+        <li class="footer_menu_list">
+          <a href="#projects">Projects</a>
+        </li>
+        <li class="footer_menu_list">
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div> -->
+
+    <div class="footer-social-icons">
+      <div class="icon">
+        <a href="https://linkedin.com/in/boitumelo-sinwamadi-4546a6285/" target="_blank" rel="noopener noreferrer">
+          <fa-icon [icon]="faLinkedin"></fa-icon>
+        </a>
+      </div>
+    
+      <div class="icon">
+        <a href="https://github.com/Boitumelo-perez" target="_blank" rel="noopener noreferrer">
+          <fa-icon [icon]="faGithub"></fa-icon>
+        </a>
+      </div>
+      <div class="icon">
+        <a href="https://wa.me/+27694369805" target="_blank" rel="noopener noreferrer">
+          <fa-icon [icon]="faWhatsapp"></fa-icon>
+        </a>
+      </div>
+    </div>
+    <div class="bottom-footer">
+      <p>
+        Copyright ©
+        <a href="#" style="text-decoration: none">Sinwamadi Boitumelo Perez</a> All rights
+        reserved 2025.
+      </p>
+    </div>
+  </footer>
