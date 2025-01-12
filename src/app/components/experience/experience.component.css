@@ -1,0 +1,103 @@
+.container {
+    display: flex;
+    flex-direction: grid;
+    margin: 40px;
+    background-color: #f8f8f8;
+}
+
+.container p {
+    padding: 20px;
+    /* color:blueviolet; */
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.experience {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+}
+
+.experience:last-of-type {
+    border-bottom: none;
+}
+
+.job-title {
+    color: #34495e;
+}
+
+.company-info {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+.company-info a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s   
+}
+
+.company-info :hover {
+    cursor: pointer;
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+.company-info a::after { 
+    font-size: 0.7rem;
+    margin-left: 0.3rem;
+    color: inherit;
+}
+
+.section-title {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-top: 1rem;
+}
+
+ul {
+    margin: 0;
+    padding: 0 0 0 1.5rem;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 400px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: -0.015em;
+    margin-left: 20px;
+}
+
+.details {
+    display: none;
+    animation: fadeIn 0.2s ease;
+}
+
+.experience:hover .details {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

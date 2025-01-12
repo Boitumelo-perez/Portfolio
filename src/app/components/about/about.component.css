@@ -1,11 +1,12 @@
-.about {
-    padding-bottom: 60px;
+.main-c {
+    padding-bottom: 50px;
 }
 .container {
     display: flex;
     flex-direction: grid;
     margin: 40px;
     background-color: #f8f8f8;
+
 }
 
 .container p {
@@ -22,6 +23,7 @@
 .profile {
     width: 300px; /* Adjust according to your image size */
     height: 300px;
+    padding: 40px;
     position: relative;
     overflow: hidden;
 }

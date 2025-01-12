@@ -41,13 +41,6 @@
   0% { background-position: -50% 0; }
   100% { background-position: 150% 0; }
  }
-/* nav {
-    position: absolute;
-    right:30px;
-    top:20px;
-    width: 100px;
-    perspective: 1000px;
-  } */
   
   .n-btn {
     position: absolute;
@@ -153,4 +146,12 @@
 .icon fa-icon {
   box-shadow: #ccc;
   color: black;
+}
+
+.b app-about {
+  height: 100vh;
+}
+
+.bottom-footer p a {
+  color: #007bff;
 }
