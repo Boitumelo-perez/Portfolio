@@ -1,14 +1,15 @@
 .heading {
   z-index: 1100;
   position: fixed;
-  top: 2px;
-  width: 98%;
+  top: 0px;
+  width: 100%;
   height: 92px;
   background-color: #ffffff;
 }
 
 .heading hr {
   margin-left: 18px;
+  width: 97%;
 }
 
 .name {
