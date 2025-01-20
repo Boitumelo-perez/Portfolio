@@ -47,7 +47,7 @@ h2 {
 .company-info a {
     color: inherit;
     text-decoration: none;
-    transition: color 0.3s, text-decoration 0.3s   
+    transition: color 0.3s, text-decoration 0.3s
 }
 
 .company-info :hover {
@@ -56,7 +56,7 @@ h2 {
     text-decoration: underline;
 }
 
-.company-info a::after { 
+.company-info a::after {
     font-size: 0.7rem;
     margin-left: 0.3rem;
     color: inherit;
@@ -71,6 +71,8 @@ h2 {
 ul {
     margin: 0;
     padding: 0 0 0 1.5rem;
+
+    margin-bottom: 0.5rem;
 }
 
 ul li {
@@ -82,11 +84,23 @@ ul li {
     line-height: 1.5;
     letter-spacing: -0.015em;
     margin-left: 20px;
+
+    margin: 0;
+    padding-left: 1.5rem;
 }
 
 .details {
     display: none;
     animation: fadeIn 0.2s ease;
+
+    cursor: pointer;
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+    max-height: 1000px;
+}
+
+.details.collapsed {
+    max-height: 40px;
 }
 
 .experience:hover .details {
@@ -97,6 +111,7 @@ ul li {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }

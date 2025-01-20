@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class ExperienceComponent {
 
+    isExpanded = false;
+
+    toggleDetails() {
+        this.isExpanded = !this.isExpanded; // Toggle expanded state
+      }
 }
