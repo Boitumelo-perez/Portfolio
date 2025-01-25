@@ -5,7 +5,11 @@ import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-root',
-    imports: [RouterOutlet, ScrollNavComponent, CommonModule],
+    imports: [
+      RouterOutlet, 
+      // ScrollNavComponent, 
+      CommonModule
+    ],
     templateUrl: './app.component.html',
     styleUrl: './app.component.css'
 })
