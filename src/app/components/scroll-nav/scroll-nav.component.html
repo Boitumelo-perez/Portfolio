@@ -1,22 +1,3 @@
-<!-- <div class="semi-nav">
-  <div
-    class="nav-card"
-    *ngFor="let section of sections; let i = index"
-    [ngStyle]="getCardStyle(i)"
-    [class.active]="i === currentSectionIndex"
-    (click)="scrollToSection(section.id)"
-  >
-    {{ section.name }}
-  </div>
-</div> -->
-
-<!-- <div class="navigator">
-  <div class="show" *ngFor="sections">
-    <h4>{{currentSectionIndex}}</h4>
-  </div>
-</div> -->
-
-
 <div class="nav-container" *ngIf="isHomeRoute">
   <div class="nav-wrapper">
     <button 
