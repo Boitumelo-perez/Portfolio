@@ -1,59 +1,69 @@
-.semi-nav {
+.nav-container {
   position: fixed;
+  top: 2rem;
+  right: 1.5rem;
   z-index: 1200;
-  top: 5.5%;
-  right: 6px;
-  transform: translateY(-50%);
-  width: 150px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-.nav-card {
+.nav-wrapper {
   position: relative;
-  padding: 10px;
-  background-color: lightgray;
-  text-align: center;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 160px;
+  padding: 0.5rem 1rem;
+  background: #007bff;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  margin-top: -40px; /* Overlap cards */
+  transition: all 0.3s ease;
 }
 
-.nav-card:nth-child(1) {
-  z-index: 6;
-  transform: translateY(0);
-}
-.nav-card:nth-child(2) {
-  z-index: 5;
-  transform: translateY(10px);
-}
-.nav-card:nth-child(3) {
-  z-index: 4;
-  transform: translateY(20px);
-}
-.nav-card:nth-child(4) {
-  z-index: 3;
-  transform: translateY(30px);
-}
-.nav-card:nth-child(5) {
-  z-index: 2;
-  transform: translateY(40px);
-}
-.nav-card:nth-child(6) {
-  z-index: 1;
-  transform: translateY(50px);
+.nav-button:hover {
+  background: #007bff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-.nav-card.active {
-  z-index: 7;
-  background-color: #007bff;
+.arrow {
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  transition: transform 0.2s;
+}
+
+.arrow.up {
+  transform: rotate(-135deg);
+}
+
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  width: 160px;
+  background: #007bff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+.dropdown-item {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: none;
   color: white;
-  transform: translateY(-10px) scale(1.1);
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
-.nav-card:hover {
-  transform: translateY(-5px) scale(1.05);
+.dropdown-item:hover {
+  background-color: #007bff;
 }

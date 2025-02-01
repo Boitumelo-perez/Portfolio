@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
     selector: 'app-root',
     imports: [
       RouterOutlet, 
-      // ScrollNavComponent, 
+      ScrollNavComponent, 
       CommonModule
     ],
     templateUrl: './app.component.html',

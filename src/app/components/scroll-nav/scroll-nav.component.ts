@@ -1,5 +1,12 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, OnDestroy } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { filter } from 'rxjs/operators';
+
+interface Section {
+  selector: string;
+  label: string;
+}
 
 @Component({
     selector: 'app-scroll-nav',
@@ -9,40 +16,80 @@ import { CommonModule } from '@angular/common';
 })
 export class ScrollNavComponent {
 
-  sections = [
-    { id: 'home', name: 'Home' },
-    { id: 'about', name: 'About' },
-    { id: 'projects', name: 'Projects' },
-    { id: 'experience', name: 'Experience' },
-    { id: 'skills', name: 'Skills' },
-    { id: 'contact', name: 'Contact' },
+  isOpen = false;
+  currentSection = 'home';
+  isHomeRoute = false;
+
+  sections: Section[] = [
+    { selector: '.b', label: 'Home' },
+    { selector: 'app-about', label: 'About' },
+    { selector: 'app-projects', label: 'Projects' },
+    { selector: 'app-experience', label: 'Experience' },
+    { selector: 'app-skills', label: 'Skills' },
+    { selector: 'app-contact', label: 'Contact' }
   ];
 
-  currentSectionIndex = 0;
+  constructor(private router: Router) {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      this.isHomeRoute = this.router.url === '/' || this.router.url === '/home';
+      if (this.isHomeRoute) {
+        setTimeout(() => this.updateCurrentSection(), 100);
+      }
+    });
+  }
 
-  scrollToSection(sectionId: string): void {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  ngOnInit() {
+    this.isHomeRoute = this.router.url === '/' || this.router.url === '/home';
+    if (this.isHomeRoute) {
+      setTimeout(() => this.updateCurrentSection(), 100);
     }
   }
 
-  @HostListener('window:scroll', [])
-  onWindowScroll(): void {
-    const offsets = this.sections.map(section => {
-      const element = document.getElementById(section.id);
-      return element ? element.getBoundingClientRect().top : Infinity;
-    });
-
-    this.currentSectionIndex = offsets.findIndex(offset => offset > 0 && offset < window.innerHeight / 2);
+  @HostListener('window:scroll')
+  onWindowScroll() {
+    if (this.isHomeRoute) {
+      this.updateCurrentSection();
+    }
   }
 
-  getCardStyle(index: number): any {
-    const zIndex = this.sections.length - Math.abs(index - this.currentSectionIndex);
-    const offset = Math.min(Math.abs(index - this.currentSectionIndex) * 10, 50);
-    return {
-      zIndex: zIndex,
-      transform: `translateY(${offset}px)`,
-    };
+  updateCurrentSection() {
+    const scrollPosition = window.scrollY + 100;
+
+    for (const section of this.sections) {
+      const element = document.querySelector(section.selector) as HTMLElement;
+      if (element) {
+        const offsetTop = element.offsetTop;
+        const offsetHeight = element.offsetHeight;
+        if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+          this.currentSection = section.label;
+        }
+      }
+    }
+  }
+
+  navigateToSection(selector: string) {
+    if (this.router.url !== '/' && this.router.url !== '/home') {
+      this.router.navigate(['/home']).then(() => {
+        setTimeout(() => {
+          this.scrollToSection(selector);
+        }, 100);
+      });
+    } else {
+      this.scrollToSection(selector);
+    }
+    this.isOpen = false;
+  }
+
+  private scrollToSection(selector: string) {
+    const element = document.querySelector(selector) as HTMLElement;
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  ngOnDestroy() {
+    // Clean up any subscriptions if needed
   }
 }
