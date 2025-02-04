@@ -92,3 +92,9 @@
     display: block; /* Ensure label behaves like a block element */
     margin: 10px 0; /* Add vertical margin for spacing */
   }
+
+  @media (max-width:400px) {
+    .project-box {
+      margin: 10px;
+    }
+  }

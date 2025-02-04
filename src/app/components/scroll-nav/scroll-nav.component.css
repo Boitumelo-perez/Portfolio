@@ -67,3 +67,12 @@
 .dropdown-item:hover {
   background-color: #007bff;
 }
+
+
+
+
+@media (max-width: 400px) {
+  .nav-container {
+    top: 3.85rem;
+  }
+}

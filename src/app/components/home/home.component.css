@@ -13,12 +13,12 @@
 }
 
 .name {
-  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-weight: 400px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 32px;
   font-style: normal;
   line-height: 1.5;
   letter-spacing: -0.015em;
-  margin-left: 20px; */
+  margin-left: 20px;
   background: linear-gradient(to bottom, #ffffff, rgba(29, 29, 29, 0.733));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -155,4 +155,19 @@
 
 .bottom-footer p a {
   color: #007bff;
+}
+
+
+
+@media (max-width: 400px) {
+  .name {
+    font-size: 27px;
+    margin-bottom: 0px;   
+  }
+  .heading {
+    height: 109px;
+  }
+  .heading hr {
+    top: 82px;
+  }
 }

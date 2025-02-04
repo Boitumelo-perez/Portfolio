@@ -94,3 +94,22 @@ button:hover {
 .forum h1 {
     text-align: center;
 }
+
+@media (max-width:400px) {
+    .git-container {
+        flex-direction: column;
+        border-bottom-right-radius: 18px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 18px;
+    }
+
+    .forum {
+        left: 0;
+        width: 92%;
+    }
+
+    input,
+    textarea {
+        width: auto;
+    }
+}

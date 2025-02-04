@@ -1,6 +1,7 @@
 .main-c {
     padding-bottom: 50px;
 }
+
 .container {
     display: flex;
     flex-direction: grid;
@@ -21,7 +22,8 @@
 }
 
 .profile {
-    width: 300px; /* Adjust according to your image size */
+    width: 300px;
+    /* Adjust according to your image size */
     height: 300px;
     padding: 40px;
     position: relative;
@@ -35,4 +37,29 @@
     /* margin-left: 260px; */
     margin-left: 20px;
 
+}
+
+
+@media (max-width: 400px) {
+    .container {
+        flex-direction: column-reverse;
+        margin: 8px;
+    }
+
+    .container .words {
+        font-size: 15px;
+    }
+
+    .container p {
+        padding: 0px;
+    }
+
+    .profile {
+        padding: 40px;
+    }
+
+    .profile img {
+        margin-left: 0px;
+
+    }
 }
