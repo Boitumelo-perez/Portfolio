@@ -2,22 +2,23 @@
     <h1>Experience</h1>
     <hr>
 </div>
-<div class="container">
-    <div class="E-card" (click)="toggleDetails()">
-      <h2 class="job-title">FullStack Java Developer</h2>
-      <p class="company-info">
-        <a href="https://geeks4learning.com/" target="_blank">Geeks4Learning</a>, 
-        6 Coombe Pl, Rivonia, Sandton, 2128 <br> 
-        February 2024 - January 2025
-      </p>
-      <div class="details" [class.collapsed]="!isExpanded">
-        <p *ngIf="isExpanded">Key Responsibilities:</p>
-        <ul *ngIf="isExpanded">
-          <li>Developed and maintained full-stack Java applications.</li>
-          <li>Collaborated with cross-functional teams for project delivery.</li>
-          <li>Implemented RESTful APIs and managed database integrations.</li>
-          <li>Collaborated in Agile environment using Kanbar.</li>
-        </ul>
-      </div>
+<div class="container" (click)="toggleDetails()">
+  <div class="E-card">
+    <h2 class="job-title">FullStack Java Developer</h2>
+    <p class="company-info">
+      <a href="https://geeks4learning.com/" target="_blank">Geeks4Learning</a>, 
+      6 Coombe Pl, Rivonia, Sandton, 2128 <br> 
+      February 2024 - January 2025
+    </p>
+    <h6 class="msg" [hidden]="showDetails">click for key Responsibilities</h6>
+    <div class="details" [ngClass]="{'show':showDetails}">
+      <p>Key Responsibilities:</p>
+      <ul>
+        <li>Developed and maintained full-stack Java applications.</li>
+        <li>Collaborated with cross-functional teams for project delivery.</li>
+        <li>Implemented RESTful APIs and managed database integrations.</li>
+        <li>Collaborated in Agile environment using Kanban.</li>
+      </ul>
     </div>
   </div>
+</div>

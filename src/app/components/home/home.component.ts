@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faGithub, faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
@@ -7,6 +7,7 @@ import { ProjectsComponent } from '../projects/projects.component';
 import { ExperienceComponent } from '../experience/experience.component';
 import { SkillsComponent } from '../skills/skills.component';
 import { ContactComponent } from '../contact/contact.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-home',
@@ -16,7 +17,8 @@ import { ContactComponent } from '../contact/contact.component';
       ProjectsComponent,
       ExperienceComponent,
       SkillsComponent,
-      ContactComponent
+      ContactComponent,
+      CommonModule
     ],
     templateUrl: './home.component.html',
     styleUrl: './home.component.css'
@@ -26,6 +28,9 @@ export class HomeComponent {
   faLinkedin = faLinkedin;
   faWhatsapp = faWhatsapp;
 
+  scrolled = false;
+  showResumeModal = false;
+
   onMouseMove(event: MouseEvent): void {
     const target = event.target as HTMLElement;
     const rect = target.getBoundingClientRect();
@@ -34,18 +39,26 @@ export class HomeComponent {
     target.style.setProperty('--x', `${x}px`);
     target.style.setProperty('--y', `${y}px`);
   }
-  // constructor(private router: Router) {}
+  
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.scrolled = window.scrollY > 10;
+  }
 
-  // isActive(route: string): boolean {
-  //   return this.router.url === route;
-  // }
+  openResumeModal() {
+    console.log("CV Button Clicked!");
+    this.showResumeModal = true;
+  }
 
-  // scrollTo(sectionId: string): void {
+  closeResumeModal() {
+    this.showResumeModal = false;
+  }
 
-  //   const section = document.getElementById(sectionId);
-  //   if(section) {
-  //     section.scrollIntoView({behavior: 'smooth', block: 'start' });
-  //   }
-  // }
+  scrollToContact() {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
   
 }

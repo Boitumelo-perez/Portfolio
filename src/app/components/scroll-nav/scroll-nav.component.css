@@ -1,7 +1,7 @@
 .nav-container {
   position: fixed;
-  top: 2rem;
-  right: 1.5rem;
+  top: 1.35rem;
+  right: 1.7rem;
   z-index: 1200;
 }
 
@@ -73,6 +73,10 @@
 
 @media (max-width: 400px) {
   .nav-container {
-    top: 3.85rem;
+    /* top: 3.85rem; */
+    right: 0.4rem;
+  }
+  .nav-button {
+    width: 115px;
   }
 }

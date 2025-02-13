@@ -1,31 +1,103 @@
+.ho {
+  background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)15%),
+    url('/Wall.jpg');
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: cover;
+  width: 100.55%;
+  height: 90vh;
+  text-decoration: #ffffff;
+}
+
+.tittle {
+  padding-top:150px;
+  font-size: 70px;
+}
+
+.ho h2 {
+  font-family: 'Great Vibes', cursive;
+  letter-spacing: 1px;
+  margin: 10px 10px;
+  animation: typing 5s steps(30, end) forwards, blink 0.8s infinite, fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
 .heading {
   z-index: 1100;
   position: fixed;
   top: 0px;
+  left: 0px;
   width: 100%;
-  height: 92px;
-  background-color: #ffffff;
+  height: auto;
+  height: 72px;
+  background-color: #bab9aa;
+  transition: background 0.3s ease-in-out;
+  align-items: center;
+  display: flex;
+
+}
+
+header.scrolled {
+  background: #007bff !important;
+  opacity: 100%;
+
 }
 
 .heading hr {
+  top: 64px;
+  position: absolute;
   margin-left: 18px;
-  width: 97%;
+  width: 95%;
 }
 
 .name {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 32px;
+  font-size: 3vw;
   font-style: normal;
+  font-size: clamp(24px, 4vw, 32px);
   line-height: 1.5;
   letter-spacing: -0.015em;
-  margin-left: 20px;
-  background: linear-gradient(to bottom, #ffffff, rgba(29, 29, 29, 0.733));
+  background: linear-gradient(to bottom, #ffffff, rgba(151, 205, 255, 0.733));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  word-break: break-word;
+}
+
+.name.scrolled {
+  background: linear-gradient(to bottom, #ffffff, rgb(128, 128, 128));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
 
 .b {
-  margin-top: 100px;
+  margin-top: 73px;
+  margin-left: -13px;
+  
 }
 
 .text-racing {
@@ -36,9 +108,9 @@
   background-clip: text;
   background-size: 50% 100%;
   animation: textRace 2s linear infinite;
- }
- 
- /* @keyframes textRace {
+}
+
+/* @keyframes textRace {
   0% { background-position: -50% 0; }
   100% { background-position: 150% 0; }
  }
@@ -129,8 +201,8 @@
 }
 
 .footer-social-icons {
-    display: flex;
-    gap: 50px;
+  display: flex;
+  gap: 50px;
 }
 
 .icon {
@@ -157,17 +229,77 @@
   color: #007bff;
 }
 
+.l-btn {
+  margin: 20px;
+  padding: 8px;
+  border-radius: 7px;
+  width: 100px;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 1200;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-content {
+  background: white;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
 
 
 @media (max-width: 400px) {
   .name {
-    font-size: 27px;
-    margin-bottom: 0px;   
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
+
   .heading {
-    height: 109px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
+
   .heading hr {
-    top: 82px;
+    width: 87%;
+  }
+
+  .ho h1 {
+    padding-top: 60px;
+    color: #ffffff;
+  }
+  .p {
+    color: #ffffff;
   }
 }
+
+

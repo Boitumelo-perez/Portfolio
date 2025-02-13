@@ -10,10 +10,9 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 export class ExperienceComponent {
 
-    isExpanded = false;
+    showDetails = false;
 
-    toggleDetails(): void {
-        console.log('Clicked!'); // Add this line
-        this.isExpanded = !this.isExpanded;
-      }
+  toggleDetails() {
+    this.showDetails = !this.showDetails;
+  }
 }

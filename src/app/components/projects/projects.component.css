@@ -93,7 +93,7 @@
     margin: 10px 0; /* Add vertical margin for spacing */
   }
 
-  @media (max-width:400px) {
+  @media (max-width:450px) {
     .project-box {
       margin: 10px;
     }

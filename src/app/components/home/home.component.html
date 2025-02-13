@@ -1,34 +1,48 @@
-<header class="heading">
-    <h1 class="name">Sinwamadi Boitumelo Perez</h1>
-    <hr>
+<header class="heading" [class.scrolled]="scrolled">
+  <h1 class="name" [class.scrolled]="scrolled">Sinwamadi Boitumelo Perez</h1>
+  <hr>
 </header>
 
-<body>
-  <div class="b">
-    <h1>Welcome to My Portfolio</h1>
-    <!-- <p>Hi, I'm Sinwamadi Boitumelo Perez, a Full-Stack Developer with expertise in Software Development using Angular and Spring Frameworks.</p> -->
-    <p class="text-racing">Hi, I'm Sinwamadi Boitumelo Perez, a Full-Stack Developer with expertise in Software Development using Angular and Spring Frameworks.</p>
-    <!-- <button mat-raised-button (click)="scrollTo('projects')">View Projects</button> -->
+<div class="b">
+  <div class="ho">
+    <!-- <h2>Welcome to My Portfolio</h2> -->
+    <h1 class="tittle"> Full Stack Developer</h1>
+    <p class="text-racing">
+      Hi, I'm Sinwamadi Boitumelo Perez,<br>
+      a Full-Stack Developer with expertise<br>
+      in Software Development using <br>
+      Angular and Spring Frameworks.
+    </p>
+    <button class="l-btn" (click)="scrollToContact()">Get in touch</button>
+    <button class="l-btn" id="cv-btn" (click)="openResumeModal()">view CV</button>
 
-    <app-about></app-about>
-
-    <app-projects></app-projects>
-
-    <app-experience></app-experience>
-
-    <app-skills></app-skills>
-    
-    <app-contact></app-contact>
-  
+    <div *ngIf="showResumeModal" class="overlay">
+      <div class="overlay-content">
+        <span class="close-btn" (click)="closeResumeModal()">&times;</span>
+        <embed src="/src/assets/SINWAMADI-BOITUMELO-PEREZ.pdf" type="application/pdf" width="100%" height="500px"/>
+        <a href="/src/assets/SINWAMADI-BOITUMELO-PEREZ.pdf" download class="download-btn">Download Resume</a>
+      </div>
+    </div>
   </div>
-</body>
+  <app-about></app-about>
+
+  <app-projects></app-projects>
+
+  <app-experience></app-experience>
+
+  <app-skills></app-skills>
+
+  <app-contact></app-contact>
+  
+</div>
+
 
 <footer class="footer">
-    <div class="top-footer">
-      <p>Sinwamadi Boitumelo Perez.</p>
-    </div>
+  <div class="top-footer">
+    <p>Sinwamadi Boitumelo Perez.</p>
+  </div>
 
-    <!-- <div class="middle-footer">
+  <!-- <div class="middle-footer">
       <ul class="footer-menu">
         <li class="footer_menu_list">
           <a href="#">Home</a>
@@ -45,29 +59,29 @@
       </ul>
     </div> -->
 
-    <div class="footer-social-icons">
-      <div class="icon">
-        <a href="https://linkedin.com/in/boitumelo-sinwamadi-4546a6285/" target="_blank" rel="noopener noreferrer">
-          <fa-icon [icon]="faLinkedin"></fa-icon>
-        </a>
-      </div>
-    
-      <div class="icon">
-        <a href="https://github.com/Boitumelo-perez" target="_blank" rel="noopener noreferrer">
-          <fa-icon [icon]="faGithub"></fa-icon>
-        </a>
-      </div>
-      <div class="icon">
-        <a href="https://wa.me/+27694369805" target="_blank" rel="noopener noreferrer">
-          <fa-icon [icon]="faWhatsapp"></fa-icon>
-        </a>
-      </div>
+  <div class="footer-social-icons">
+    <div class="icon">
+      <a href="https://linkedin.com/in/boitumelo-sinwamadi-4546a6285/" target="_blank" rel="noopener noreferrer">
+        <fa-icon [icon]="faLinkedin"></fa-icon>
+      </a>
     </div>
-    <div class="bottom-footer">
-      <p>
-        Copyright ©
-        <a href="#" style="text-decoration: none">Sinwamadi Boitumelo Perez</a> All rights
-        reserved 2025.
-      </p>
+
+    <div class="icon">
+      <a href="https://github.com/Boitumelo-perez" target="_blank" rel="noopener noreferrer">
+        <fa-icon [icon]="faGithub"></fa-icon>
+      </a>
     </div>
-  </footer>
+    <div class="icon">
+      <a href="https://wa.me/+27694369805" target="_blank" rel="noopener noreferrer">
+        <fa-icon [icon]="faWhatsapp"></fa-icon>
+      </a>
+    </div>
+  </div>
+  <div class="bottom-footer">
+    <p>
+      Copyright ©
+      <a href="#" style="text-decoration: none">Sinwamadi Boitumelo Perez</a> All rights
+      reserved 2025.
+    </p>
+  </div>
+</footer>
