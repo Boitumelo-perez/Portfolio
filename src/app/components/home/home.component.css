@@ -1,11 +1,11 @@
 .ho {
-  background: linear-gradient(to top, #ffffff, #00000000 15%), url("/../assets/Wall.jpg");
-  background-repeat: no-repeat;
+  /* background: linear-gradient(to top, #ffffff, #00000000 15%), url("/../assets/Wall.jpg"); */
+  /* background-repeat: no-repeat;
   background-position: top right;
   background-size: cover;
   width: 100.70%;
   height: 90vh;
-  text-decoration: #ffffff;
+  text-decoration: #ffffff; */
 }
 
 .tittle {
