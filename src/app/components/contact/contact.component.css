@@ -91,6 +91,10 @@ button:hover {
     margin-bottom: 10px;
 }
 
+.forum ul li a {
+    color: black !important;
+}
+
 .forum h1 {
     text-align: center;
 }
@@ -107,7 +111,9 @@ button:hover {
         left: 0;
         width: 92%;
     }
-
+    .forum ul li {
+        margin-left: 2px;
+    }
     input,
     textarea {
         width: auto;
