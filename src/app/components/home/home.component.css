@@ -1,5 +1,6 @@
 .ho {
-  background: linear-gradient(to top, #ffffff, #00000000 15%), url("/../assets/Wall.jpg");
+  /* background: linear-gradient(to top, #ffffff, #00000000 15%), url("/../assets/Wall.jpg"); */
+  background: linear-gradient(to top, #ffffff, #00000000 15%), url("/../assets/WallP.png");
   background-repeat: no-repeat;
   background-position: top right;
   background-size: cover;
