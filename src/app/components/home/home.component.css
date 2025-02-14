@@ -1,23 +1,14 @@
 .ho {
-  background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)15%),
-  url("/../assets/Wall.jpg");
+  /* background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)15%),
+  url(/assets/Wall.jpg); */
+  background: linear-gradient(to top, #ffffff, #00000000 15%), url(/assets/Wall.jpg);
   background-repeat: no-repeat;
   background-position: top right;
   background-size: cover;
-  width: 100.55%;
+  width: 100.70%;
   height: 90vh;
   text-decoration: #ffffff;
 }
-
-/* .bg {
-  z-index: -1000;
-  size: cover;
-  position: fixed;
-  top: 73px;
-  left: -13;
-  width: 100.55%;
-  height: 90vh;
-} */
 
 .tittle {
   padding-top:150px;
