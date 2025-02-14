@@ -9,6 +9,7 @@ import { SkillsComponent } from '../skills/skills.component';
 import { ContactComponent } from '../contact/contact.component';
 import { CommonModule } from '@angular/common';
 
+
 @Component({
     selector: 'app-home',
     imports: [
@@ -46,7 +47,6 @@ export class HomeComponent {
   }
 
   openResumeModal() {
-    console.log("CV Button Clicked!");
     this.showResumeModal = true;
   }
 

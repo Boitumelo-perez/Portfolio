@@ -1,6 +1,6 @@
 .ho {
   background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)15%),
-    url('/Wall.jpg');
+    url("/assets/Wall.jpg");
   background-repeat: no-repeat;
   background-position: top right;
   background-size: cover;
@@ -101,7 +101,7 @@ header.scrolled {
 }
 
 .text-racing {
-  color: #000;
+  color: #ffffff;
   /* font-weight: ; */
   background: linear-gradient(90deg, transparent, #17d7e1, transparent) no-repeat;
   -webkit-background-clip: text;

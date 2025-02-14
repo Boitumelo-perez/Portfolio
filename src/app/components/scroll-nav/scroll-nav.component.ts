@@ -54,9 +54,9 @@ export class ScrollNavComponent {
     }
   }
 
-  updateCurrentSection() {
+  updateCurrentSection(): void {
+    if (typeof window !== 'undefined') {
     const scrollPosition = window.scrollY + 100;
-
     for (const section of this.sections) {
       const element = document.querySelector(section.selector) as HTMLElement;
       if (element) {
@@ -68,6 +68,7 @@ export class ScrollNavComponent {
       }
     }
   }
+}
 
   navigateToSection(selector: string) {
     if (this.router.url !== '/' && this.router.url !== '/home') {
