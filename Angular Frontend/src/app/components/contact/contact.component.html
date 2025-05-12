@@ -5,7 +5,7 @@
 
 
 <div class="main-container">
-   
+
     <div class="git-container">
 
         <div class="forum">
@@ -17,14 +17,15 @@
                         Midrand, Gauteng South Africa
                     </li>
                     <li>
-                      <a href="https://github.com/Boitumelo-perez" target="_blank" rel="noopener noreferrer">
-                        <fa-icon [icon]="faGithub"></fa-icon>
-                        Boitumelo-perez</a>
+                        <a href="https://github.com/Boitumelo-perez" target="_blank" rel="noopener noreferrer">
+                            <fa-icon [icon]="faGithub"></fa-icon>
+                            Boitumelo-perez</a>
                     </li>
                     <li>
-                      <a href="https://linkedin.com/in/boitumelo-sinwamadi-4546a6285/" target="_blank" rel="noopener noreferrer">
-                        <fa-icon [icon]="faLinkedin"></fa-icon>
-                        Boitumelo Sinwamadi Perez</a>
+                        <a href="https://linkedin.com/in/boitumelo-sinwamadi-4546a6285/" target="_blank"
+                            rel="noopener noreferrer">
+                            <fa-icon [icon]="faLinkedin"></fa-icon>
+                            Boitumelo Sinwamadi Perez</a>
                     </li>
                     <li>
                         <fa-icon [icon]="faEnvelope"></fa-icon>
@@ -60,6 +61,8 @@
                 <button type="submit" class="btn btn-primary">Submit</button>  
             </div>
         </form>
+
+        <div *ngIf="successMessage" class="success">{{ successMessage }}</div>
+        <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
     </div>
 </div>
-

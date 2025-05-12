@@ -5,16 +5,21 @@ import { ScrollNavComponent } from './components/scroll-nav/scroll-nav.component
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
-  declarations: [AppComponent, ScrollNavComponent ],
+  declarations: [],
   imports: [
     BrowserModule,
     FontAwesomeModule,
     CommonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    ScrollNavComponent,
+    AppComponent
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  // Removed bootstrap array as AppComponent is standalone
 })
 export class AppModule { }
