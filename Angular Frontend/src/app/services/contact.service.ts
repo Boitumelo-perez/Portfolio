@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 export interface ContactFormData {
+phone: any;
   name: string;
   email: string;
   subject: string;

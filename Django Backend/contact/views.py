@@ -13,10 +13,20 @@ def submit_message(request):
         # Send email
         name = serializer.validated_data.get('name')
         email = serializer.validated_data.get('email')
-        subject = serializer.validated_data.get('subject', 'PORTFOLIO NOTIFICATION  ')
+        subject = serializer.validated_data.get('subject', 'PORTFOLIO NOTIFICATIONsss')
+        phone = serializer.validated_data.get('phone')
         message = serializer.validated_data.get('message')
 
-        full_message = f"From: {name} <{email}>\n\n{message}"
+        # full_message = f"From: {name} <{email}>\n\n{message}"
+        full_message = f"""
+        
+        {name} is reaching out to you!
+        
+        {message}
+        
+        {email}
+        {phone}
+        """.strip()
 
         try:
             send_mail(

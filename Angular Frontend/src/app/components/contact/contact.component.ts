@@ -4,7 +4,6 @@ import { faMapMarkerAlt, faEnvelope, faPhone } from '@fortawesome/free-solid-svg
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { ContactService, ContactFormData } from '../../services/contact.service';
 import { CommonModule } from '@angular/common';
-// import { provideHttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -25,12 +24,13 @@ export class ContactComponent {
 formData: ContactFormData = {
     name: '',
     email: '',
-    subject: '',
-    message: ''
+    subject: 'PORTFOLIO NOTIFICATION!',
+    message: '',
+    phone: '',
   };
 
-  successMessage = '';
-  errorMessage = '';
+  successMessage = 'Success! Your message has been sent.';
+  errorMessage = 'Error sending message';
 
   constructor(private contactService: ContactService) {}
 
@@ -41,7 +41,7 @@ formData: ContactFormData = {
     next: () => {
       this.successMessage = 'Your message has been sent!';
       this.errorMessage = '';
-      this.formData = { name: '', email: '', subject: '', message: '' };
+      this.formData = { name: '', email: '', subject: '', message: '', phone: '' }; // Reset form data
     },
     error: (err) => {
       this.errorMessage = 'There was an error sending your message.';
