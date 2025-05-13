@@ -130,8 +130,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_ALL_ORIGINS = True
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST = 'smtp.mail.me.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'perez_st@icloud.com'
-EMAIL_HOST_PASSWORD = 'your_app_password'  
+EMAIL_HOST_PASSWORD = 'amde-fekm-elyj-bfdu'
+DEFAULT_FROM_EMAIL = 'perez_st@icloud.com'
+
+
+
