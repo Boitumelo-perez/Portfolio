@@ -42,3 +42,18 @@ def submit_message(request):
             return Response({'error': f'Message saved, but email failed: {str(e)}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+# views.py
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def my_messages(request):
+    # Fetch messages for the authenticated user (you)
+    messages = [
+        {"id": 1, "text": "New contact form message from John"},
+        {"id": 2, "text": "Another inquiry from the site"},
+    ]
+    return Response(messages)
