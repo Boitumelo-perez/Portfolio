@@ -31,6 +31,7 @@ export class HomeComponent {
 
   scrolled = false;
   showResumeModal = false;
+console: any;
 
   onMouseMove(event: MouseEvent): void {
     const target = event.target as HTMLElement;
@@ -60,5 +61,10 @@ export class HomeComponent {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
+  // In your component class (home.component.ts)
+logClick() {
+  console.log('Button clicked');
+}
   
 }
