@@ -28,7 +28,7 @@ A RESTful API built with **Spring Boot** that enables users to manage tasks with
 1. **Prerequisites**:
    - Java 21
    - Maven 3.9+
-   - Docker (optional)
+   - Docker (can work without it using H2 locally)
 
 2. **Run the application**:
    ```bash
