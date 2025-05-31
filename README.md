@@ -1,5 +1,4 @@
-# Task Management API - Technical Assessment Solution
-
+# Task Management API
 ## Overview
 A RESTful API built with **Spring Boot** that enables users to manage tasks with JWT authentication, deployed via Docker. The solution fulfills all core requirements and bonus features from the technical assessment.
 
