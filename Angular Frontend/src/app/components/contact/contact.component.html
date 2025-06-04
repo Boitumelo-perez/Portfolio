@@ -60,11 +60,17 @@
                     [(ngModel)]="formData.message"></textarea>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary">Submit</button>  
+                <button type="submit" class="btn btn-primary" [disabled]="isSubmitting">Submit</button>
             </div>
         </form>
 
-        <div *ngIf="successMessage" class="success">{{ successMessage }}</div>
-        <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+        <div class="overlay" *ngIf="isSubmitting || successMessage || errorMessage">
+            <div class="overlay-content">
+                <div *ngIf="isSubmitting" class="spinner"></div>
+                <p *ngIf="successMessage" class="success">{{ successMessage }}</p>
+                <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+            </div>
+        </div>
+
+
     </div>
-</div>
