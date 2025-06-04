@@ -10,10 +10,7 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-il*u4au!*xh8_5s=9!4m03dgcvv8pj5!fvu4afh#z+7jeaq(3!'
-
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['Django Backend/portfolio_backend/settings.py']
 
 
 # Application definition
