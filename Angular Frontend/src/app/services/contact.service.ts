@@ -14,7 +14,8 @@ phone: any;
   providedIn: 'root'
 })
 export class ContactService {
-  private apiUrl = 'http://localhost:8000/api/contact/';
+  // private apiUrl = 'http://localhost:8000/api/contact/';
+  private apiUrl = 'https://portfolio-prvj.onrender.com/api/contact/';
 
   constructor(private http: HttpClient) { }
 
