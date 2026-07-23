@@ -1,13 +1,19 @@
-.h0o {
-  /* background: linear-gradient(to top, #ffffff, #00000000 15%), url("/assets/WallP.png"); */
-  /* background: linear-gradient(to top, #ffffff, #00000000 15%), url("https://boitumelo-perez.github.io/Portfolio/assets/WallP.png"); */
-  background: linear-gradient(to top, #ffffff, #00000000 15%), url("https://boitumelo-perez.site.je/assets/WallP.png");
+.ho {
+  background-image: linear-gradient(to top, #ffffff, #00000000 15%), url("/assets/WallP.png");
+  /* background-image: linear-gradient(to top, #ffffff, #00000000 15%), url("https://boitumelo-perez.github.io/Portfolio/assets/WallP.png"); */
+  /* background-image: linear-gradient(to top, #ffffff, #00000000 15%), url("https://boitumelo-perez.site.je/assets/WallP.png"); */
   background-repeat: no-repeat;
   background-position: top right;
   background-size: cover;
   width: 100.70%;
   height: 90vh;
   text-decoration: #ffffff;
+}
+
+.press {
+  margin: 20px;
+  display: flex;
+  gap: 10px;
 }
 
 .tittle {
@@ -96,7 +102,8 @@ header.scrolled {
 }
 
 .b {
-  margin-top: 73px;
+  /* margin-top: 73px; */
+  margin-top: 47px;
   margin-left: -13px;
   
 }
