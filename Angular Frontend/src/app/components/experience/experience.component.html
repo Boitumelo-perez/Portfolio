@@ -1,24 +1,70 @@
 <div class="top-header">
-    <h1>Experience</h1>
-    <hr>
+  <h1>Experience</h1>
+  <hr>
 </div>
-<div class="container" (click)="toggleDetails()">
-  <div class="E-card">
-    <h2 class="job-title">FullStack Java Developer</h2>
-    <p class="company-info">
-      <a href="https://geeks4learning.com/" target="_blank">Geeks4Learning</a>, 
-      6 Coombe Pl, Rivonia, Sandton, 2128 <br> 
-      February 2024 - January 2025
-    </p>
-    <h6 class="msg" [hidden]="showDetails">click for key Responsibilities</h6>
-    <div class="details" [ngClass]="{'show':showDetails}">
-      <p>Key Responsibilities:</p>
-      <ul>
-        <li>Developed and maintained full-stack Java applications.</li>
-        <li>Collaborated with cross-functional teams for project delivery.</li>
-        <li>Implemented RESTful APIs and managed database integrations.</li>
-        <li>Collaborated in Agile environment using Kanban.</li>
-      </ul>
+
+<div class="grandparent">
+  <div class="container" (click)="toggleDetails(0)">
+    <div class="E-card">
+      <h2 class="job-title">FullStack Java Developer</h2>
+      <p class="company-info">
+        <a href="https://geeks4learning.com/" target="_blank">Geeks4Learning</a>,
+        6 Coombe Pl, Rivonia, Sandton, 2128 <br>
+        February 2024 - January 2025
+      </p>
+      <h6 class="msg" [hidden]="activeCard === 0">click for key Responsibilities</h6>
+      <div class="details" [ngClass]="{'show': activeCard === 0}">
+        <h6 class="tag">Key Responsibilities:</h6>
+        <ul>
+          <li>Developed and maintained full-stack Java applications.</li>
+          <li>Collaborated with cross-functional teams for project delivery.</li>
+          <li>Implemented RESTful APIs and managed database integrations.</li>
+          <li>Participated in code reviews and provided constructive feedback.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="E-card" (click)="toggleDetails(1)">
+      <h2 class="job-title">AI Python Developer</h2>
+      <p class="company-info">
+        <a href="https://reverside.co/" target="_blank">Reverside</a>,
+        6 Coombe Pl, Rivonia, Sandton, 2128 <br>
+        April 2025 - May 2025
+      </p>
+      <h6 class="msg" [hidden]="activeCard === 1">click for key Responsibilities</h6>
+      <div class="details" [ngClass]="{'show': activeCard === 1}">
+        <h6 class="tag">Key Responsibilities:</h6>
+        <ul>
+          <li>Implemented a inhouse system to generated course learning materials, which required training a GPT Large Language Model.</li>
+          <li>Implemented and designed frontend and backend interfaces.</li>
+          <li>Engaged with stakeholders, presenting the system, taking in feedback into the system.</li>
+          <li>Participated in daily stand-ups and sprint planning meetings.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" (click)="toggleDetails(2)">
+    <div class="E-card">
+      <h2 class="job-title">Junior Business Central Consultant</h2>
+      <p class="company-info">
+        <a href="https://rema-tiptop.co.za/" target="_blank">Rema Tip Top</a>,
+        1 Edinburgh Road, Benoni 1500 <br>
+        July 2025 - Present
+      </p>
+      <h6 class="msg" [hidden]="activeCard === 2">click for key Responsibilities</h6>
+      <div class="details" [ngClass]="{'show': activeCard === 2}">
+        <h6 class="tag">Key Responsibilities:</h6>
+        <ul>
+          <li>Implementing and managing Organisations ERP(Business Central) and CRM(Hubspot).</li>
+          <li>Provided new users with training and support on Business Central functionalities and gave refreshers on new updates and implementations.</li>
+          <li>Engaged in Internal Audit's stock count ensuring quantities on the warehouse do match quantities in the system.</li>
+          <li>Had Monthly meetings with stakeholders giving feedback updates and improvement oppotunities.</li>
+          <li>Assited Users with any issues they encountered while using the systems, whether technical or business-related.</li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

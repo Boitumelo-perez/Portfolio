@@ -14,8 +14,8 @@
       Angular and Spring Frameworks.
     </p>
     <div class="press">
-    <button class="l-btn" (click)="scrollToContact()">Get in touch</button>
-    <button class="l-btn" id="cv-btn" (click)="openResumeModal()">view CV</button>
+      <button class="l-btn" (click)="scrollToContact()">Get in touch</button>
+      <button class="l-btn" id="cv-btn" (click)="openResumeModal()">view CV</button>
     </div>
 
     <div *ngIf="showResumeModal" class="overlay">
@@ -56,11 +56,19 @@
         <fa-icon [icon]="faGithub"></fa-icon>
       </a>
     </div>
+
     <div class="icon">
       <a href="https://wa.me/+27694369805" target="_blank" rel="noopener noreferrer">
         <fa-icon [icon]="faWhatsapp"></fa-icon>
       </a>
     </div>
+
+    <!-- <div class="icon">
+      <a routerLink="/messages" (click)="openMessage()">
+        <fa-icon [icon]="faLock"></fa-icon>
+      </a>
+    </div> -->
+
   </div>
   <div class="bottom-footer">
     <p>
@@ -69,6 +77,8 @@
       reserved 2026.
     </p>
   </div>
+
+
   <!-- <div class="passage">
     <a href="Portfolio/messages/" style="opacity: 0.3;" aria-label="Admin login" title="Admin Access">
       <video width="24" height="24" autoplay loop muted playsinline style="vertical-align: middle;">
@@ -76,7 +86,8 @@
       </video>
     </a>
   </div> -->
-  <div class="Chats">
+  
+  <!-- <div class="Chats">
     <a class="l-btn" routerLink="/login" (click)="logClick()">
       <ul>
         <li style="--i:#56CCF2;--j:#2F80ED;">
@@ -85,5 +96,5 @@
         </li>
       </ul>
     </a>
-  </div>
+  </div> -->
 </footer>

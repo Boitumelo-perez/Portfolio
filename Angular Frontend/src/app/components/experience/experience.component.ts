@@ -10,9 +10,9 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 export class ExperienceComponent {
 
-    showDetails = false;
+    activeCard: number | null = null;
 
-  toggleDetails() {
-    this.showDetails = !this.showDetails;
+  toggleDetails(cardIndex: number) {
+    this.activeCard = this.activeCard === cardIndex ? null : cardIndex;
   }
 }
