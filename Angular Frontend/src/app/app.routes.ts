@@ -3,12 +3,13 @@ import { HomeComponent } from './components/home/home.component';
 import { NgModule } from '@angular/core';
 import { LoginComponent } from './components/login/login.component';
 import { MessagesComponent } from './components/messages/messages.component';
-import { AuthGuard } from './auth/auth.guard';
+// import { AuthGuard } from './auth/auth.guard';  1. Temporarily disables Guards auth for Messages page
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
-    { path: 'Portfolio/login', component: LoginComponent },
-    { path: 'messages', component: MessagesComponent, canActivate: [AuthGuard] },
+  { path: 'login', component: LoginComponent },
+    // { path: 'messages', component: MessagesComponent, canActivate: [AuthGuard] }, 2. Temporarily disables Guards auth for Messages page
+    { path: 'messages', component: MessagesComponent },
 
 ];
 

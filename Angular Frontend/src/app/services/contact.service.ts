@@ -15,7 +15,8 @@ phone: any;
 })
 export class ContactService {
   // private apiUrl = 'http://localhost:8000/api/contact/';
-  private apiUrl = 'https://portfolio-prvj.onrender.com/api/contact/';
+  // private apiUrl = 'https://portfolio-prvj.onrender.com/api/contact/';
+  private apiUrl = 'https://message-app.free.beeceptor.com/';
 
   constructor(private http: HttpClient) { }
 
