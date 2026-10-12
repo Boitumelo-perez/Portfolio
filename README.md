@@ -1,187 +1,87 @@
-# 🚀 Portfolio
+# Portfolio
 
-<div align="center">
+This is my personal portfolio website, built with **Angular** for the frontend and a **serverless backend** powered by **Cloudflare Workers**. The contact form collects user input and sends it to **Resend**, which delivers a formatted email to my inbox.
 
-**A Personal Portfolio Showcase**
-
-[![Angular](https://img.shields.io/badge/Angular-18.1.3-red?style=flat-square&logo=angular)](https://angular.io)
-[![TypeScript](https://img.shields.io/badge/TypeScript-Latest-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
-[![Cloudflare](https://img.shields.io/badge/Cloudflare-Workers-orange?style=flat-square&logo=cloudflare)](https://workers.cloudflare.com)
-[![Resend](https://img.shields.io/badge/Resend-Email-blueviolet?style=flat-square)](https://resend.com)
-[![Live](https://img.shields.io/badge/Status-Live-success?style=flat-square)](https://boitumelo-perez.site.je/)
-
-</div>
-
----
-
-## 📖 About
-
-This is my **personal portfolio website**, built with **Angular** for the frontend and a **serverless backend** powered by **Cloudflare Workers**. The contact form collects user input and sends it to **Resend**, which delivers a formatted email straight to my inbox.
-
-I originally started with a **Django backend**, but switched to a **serverless architecture** for:
-- ⚡ Better performance
-- 💰 Lower hosting costs
-- 🎯 Simpler deployment flow
-
----
+I originally started with a **Django backend**, but switched to a **serverless architecture** for better performance, lower hosting costs, and simpler deployment.
 
 ## 🌐 Live Demo
 
-<div align="center">
-
-[🔗 Visit Portfolio](https://boitumelo-perez.site.je/) | [📍 Hosted on InfinityFree](https://www.infinityfree.net/)
-
-</div>
-
----
+**Website:** [https://boitumelo-perez.site.je/](https://boitumelo-perez.site.je/)  
+**Hosting:** InfinityFree
 
 ## 🛠️ Tech Stack
 
-<div align="center">
-
-| Frontend | Backend | Services | Hosting |
-|----------|---------|----------|---------|
-| ![Angular](https://img.shields.io/badge/Angular-red?logo=angular&logoColor=white) | ![Cloudflare](https://img.shields.io/badge/Cloudflare-Workers-orange) | ![Resend](https://img.shields.io/badge/Resend-Email-blueviolet) | ![InfinityFree](https://img.shields.io/badge/InfinityFree-Hosting-green) |
-| ![TypeScript](https://img.shields.io/badge/TypeScript-blue?logo=typescript&logoColor=white) | ![Serverless](https://img.shields.io/badge/Serverless-Architecture-yellow) | ![REST API](https://img.shields.io/badge/REST-API-brightgreen) | |
-
-</div>
-
----
+| Component | Technology |
+|-----------|------------|
+| Frontend | Angular (TypeScript) |
+| Backend | Cloudflare Workers |
+| Email Delivery | Resend |
+| Hosting | InfinityFree |
 
 ## ✨ Features
 
-- 🎨 **Responsive Design** – Beautiful layout on all devices
-- 📁 **Project Showcase** – Display your best work
-- 📧 **Contact Form** – Integrated serverless email handling
-- ⚙️ **Cloudflare Workers** – Fast, scalable backend
-- 🚀 **Optimized Performance** – Lightning-fast frontend experience
-- 🔒 **Secure Email Delivery** – Via Resend
-
----
+- Responsive personal portfolio layout
+- Project showcase
+- Contact form integration with serverless backend
+- Fast frontend experience
+- Secure email handling via Resend
 
 ## 📁 Project Structure
 
-```
-Portfolio/
-├── Angular Frontend/          # Frontend application
-│   ├── src/
-│   ├── angular.json
-│   └── ...
-└── README.md
-```
+The frontend lives in the `Angular Frontend/` folder, while the backend logic is handled by a Cloudflare Worker that receives form submissions and forwards them to Resend.
 
-**Frontend**: Angular app with TypeScript  
-**Backend**: Cloudflare Worker (receives form submissions → forwards to Resend)
+## 🚀 How to Run Locally
 
----
+### Requirements
 
-## 🚀 Quick Start
+- Node.js installed on your machine
+- npm package manager
+- Angular CLI
 
-### ✅ Prerequisites
+### Steps
 
-- ✔️ Node.js installed ([Download](https://nodejs.org/))
-- ✔️ npm package manager
-- ✔️ Angular CLI
-
-### 📝 Installation Steps
-
-1. **Clone the repository:**
-
+1. Clone the repository:
    ```bash
    git clone https://github.com/Boitumelo-perez/Portfolio.git
    cd Portfolio
    ```
 
-2. **Navigate to the Angular frontend:**
-
+2. Navigate to the Angular frontend folder:
    ```bash
    cd "Angular Frontend"
    ```
 
-3. **Install dependencies:**
-
+3. Install dependencies:
    ```bash
    npm install
    ```
 
-4. **Start the development server:**
-
+4. Start the development server:
    ```bash
    ng serve
    ```
 
-5. **Open in your browser:**
+5. Open in your browser at `http://localhost:4200`
 
-   ```
-   http://localhost:4200
-   ```
-
-### 🏗️ Production Build
+### Production Build
 
 ```bash
 ng build --configuration production
 ```
 
-Output will be in the `dist/` folder.
-
----
-
 ## ⚙️ Backend Configuration
 
-The contact form is processed through a **Cloudflare Worker**. To set up the backend:
+The contact form is processed through a Cloudflare Worker. To set up the backend:
 
 1. Create a Cloudflare Worker project
-2. Configure environment variables:
-   - `RESEND_API_KEY` – Your Resend API key
+2. Configure your environment variables (e.g., `RESEND_API_KEY`)
 3. Deploy the worker
 4. Update your frontend API endpoint to point to your worker URL
 
-For detailed setup, check the Cloudflare Workers documentation.
-
----
-
-## 🌍 Deployment
-
-<div align="center">
-
-**🔴 Live at:** https://boitumelo-perez.site.je/
-
-**📌 Hosting Provider:** InfinityFree  
-**🔧 Frontend:** Hosted on InfinityFree  
-**⚡ Backend:** Cloudflare Workers Serverless
-
-</div>
-
----
-
 ## 📸 Screenshot
-
-<div align="center">
 
 ![Portfolio Preview](https://github.com/user-attachments/assets/9f59385d-98d2-416e-858f-07a469ad93ef)
 
-</div>
-
----
-
 ## 📝 Notes
 
-- This project is a **personal portfolio** and continuously evolves.
-- Feel free to adapt it for your own use!
-- Contributions and suggestions are welcome.
-
----
-
-## 📧 Get in Touch
-
-Interested in collaborating or have questions? Reach out via the contact form on the site or open an issue here!
-
----
-
-<div align="center">
-
-**Made with ❤️ by [Boitumelo Perez](https://github.com/Boitumelo-perez)**
-
-⭐ If you like this project, please consider giving it a star!
-
-</div>
+This project is a personal portfolio and is continuously evolving. Feel free to reach out with any questions or suggestions!
