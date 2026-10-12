@@ -10,11 +10,12 @@ This is my Personal portfolio built using Angular Framework for frontend and Dja
 ### Requirements
 - Angular framework requires Node.JS to be installed on your machine.
 - run node --v
-- run git clone https://github.com/Boitumelo-perez/Portfolio.git       
+- run git clone [https://github.com/Boitumelo-perez/Portfolio.git ](https://github.com/Boitumelo-perez/Portfolio.git)      
 - Run cd '.\Angular Frontend\' to move into the angular folder
 - run npm Install
 - run ng serve
 - run for building into prod run ng build -configuration production
 
 ## User Interface
- 
+ <img width="1897" height="931" alt="image" src="https://github.com/user-attachments/assets/9f59385d-98d2-416e-858f-07a469ad93ef" />
+
