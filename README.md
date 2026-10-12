@@ -1,5 +1,6 @@
-# Portofolio
-This is my Personal portfolio built using Angular Framework for frontend and Django framework for backend. I later on switched from Django Backend as I couldn't find a free yet faster hosting site for my it as opposed to Render where I was hosting it. Currently using a serverless architecture where the logic is held on through a Cloudflare worker GETTING end user inputs from a contact form and POSTING to Resend which send a formatted email to my Designated Email.
+# Portfolio
+-- This is my Personal portfolio built using Angular Framework for frontend and Django framework for backend. I later on switched from Django Backend as I couldn't find a free yet faster hosting site for my it as opposed to Render where I was hosting it.
+-- Currently using a serverless architecture where the logic is held on through a Cloudflare worker GETTING end user inputs from a contact form and POSTING to Resend which send a formatted email to my Designated Email.
 
 # Deployment
 
