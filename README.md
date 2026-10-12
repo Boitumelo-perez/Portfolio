@@ -3,18 +3,18 @@ This is my Personal portfolio built using Angular Framework for frontend and Dja
 
 # Deployment
 
-The website is currently live on https://boitumelo-perez.site.je/ 
-I Deployed it using InfinityFree's Hosting services.
+- The website is currently live on https://boitumelo-perez.site.je/ 
+- I Deployed it using InfinityFree's Hosting services.
  
 # How to Run Locally
 ### Requirements
-Angular framework requires Node.JS to be installed on your machine.
-run node --v
-run git clone https://github.com/Boitumelo-perez/Portfolio.git       
-Run cd '.\Angular Frontend\' to move into the angular folder
-run npm Install
-run ng serve
-run for building into prod run ng build -configuration production
+- Angular framework requires Node.JS to be installed on your machine.
+- run node --v
+- run git clone https://github.com/Boitumelo-perez/Portfolio.git       
+- Run cd '.\Angular Frontend\' to move into the angular folder
+- run npm Install
+- run ng serve
+- run for building into prod run ng build -configuration production
 
 ## User Interface
  
