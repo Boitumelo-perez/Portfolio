@@ -22,9 +22,9 @@ import { RouterLink } from '@angular/router';
       ExperienceComponent,
       SkillsComponent,
       ContactComponent,
-      MessagesComponent,
+      // MessagesComponent,
       CommonModule,
-      RouterLink
+      // RouterLink
     ],
     templateUrl: './home.component.html',
     styleUrl: './home.component.css'
